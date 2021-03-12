@@ -1,3 +1,4 @@
+![Rain Seattle Annual - 19481979](https://user-images.githubusercontent.com/73729810/110890103-3fb4e800-82a4-11eb-80f6-771265968337.png)
 # hello-world
 Ken's first branch via tutorial step-by-step @ https://guides.github.com/activities/hello-world/
 # hello-world inside comment
