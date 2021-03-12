@@ -32,6 +32,16 @@ System.out.println( C  );
 
 System.out.println( A + B);
 
+
+System.out.println( 5 + 6 );
+
+
+System.out.println( 5   ==  6);
+
+System.out.println( 5 + 6   ==  6 + 5);
+      }
+}
+
        IDENTIFICATION DIVISION.
        PROGRAM-ID.       COBSHEL.
        DATE-COMPILED.   01/01/2015.
@@ -95,11 +105,3 @@ System.out.println( A + B);
            END-READ
            .
       ********  END OF PROGRAM    COBSHEL ***********************   
-System.out.println( 5 + 6 );
-
-
-System.out.println( 5   ==  6);
-
-System.out.println( 5 + 6   ==  6 + 5);
-      }
-}
