@@ -12,10 +12,15 @@ import java.util.Scanner;
 import java.text.NumberFormat;
 
 public class Arith6
+
 {
-    public static void main(String[] args)
-    {
-        System.out.println("----------------Arith6");     
+
+public static void main(String[] args)
+
+{
+
+System.out.println("----------------Arith6");     
+
 
      
         double A =  5;  
