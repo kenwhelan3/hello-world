@@ -9,8 +9,11 @@ Ken's first branch via tutorial step-by-step @ https://guides.github.com/activit
 #         3-11-21 comment 2 added to main
 #         pasted from clipboard
 import java.util.Scanner;
+
 import java.text.NumberFormat;
+
 public class Arith6
+
 {
 
 public static void main(String[] args)
