@@ -32,7 +32,69 @@ System.out.println( C  );
 
 System.out.println( A + B);
 
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID.       COBSHEL.
+       DATE-COMPILED.   01/01/2015.
+       ENVIRONMENT DIVISION.
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+      **********************************************************
+      **  THE DD NAME FOR THE DEPARTMENT FILE IS DEPTFILE   ****
+      **  LOOK FOR //DEPTFILE  DD  DSN= . . .  IN THE JCL   ****
+      **********************************************************
+           SELECT DEPT-FILE  ASSIGN TO DEPTFILE.
+       DATA DIVISION.
+       FILE SECTION.
 
+       FD  DEPT-FILE
+           RECORD CONTAINS 80 CHARACTERS
+           BLOCK  CONTAINS  0 RECORDS
+           RECORDING  MODE IS F.
+        01  DEPT-RECORD          PIC X(80).
+
+       WORKING-STORAGE SECTION.
+       01  WS-DEPT-EOF     PIC X(03)     VALUE SPACES.
+       01  WS-DEPT-RECORD  PIC X(80).
+       LINKAGE SECTION.
+
+       PROCEDURE DIVISION.
+       0000-MAIN.
+           DISPLAY '0000-MAIN'
+
+           PERFORM 1000-PROCESS-DEPT-FILE
+
+           GOBACK
+            .
+
+
+       1000-PROCESS-DEPT-FILE.
+      **********************************************************
+      ***  OPEN THE DEPARTMENT FILE TO ALLOW FOR PROCESSING   **
+      ***  PROCESS THE DEPARTMENT FILE IN THE 1000- PARAGRAPH **
+      ***  CLOSE THE DEPARTMENT FILE WHEN THE PROCESSING IN   **
+      ***      PARAGRAPH 1100- IS FINISHED                    **
+      **********************************************************
+           DISPLAY '1000-PROCESS-DEPT-FILE'
+
+           OPEN INPUT DEPT-FILE
+
+           PERFORM 1100-PROCESS-DEPT-RECORD
+
+           CLOSE DEPT-FILE
+            .
+
+       1100-PROCESS-DEPT-RECORD.
+      **********************************************************
+      ********  READ ONE RECORD FROM THE DEPARTMENT FILE  ******
+      **********************************************************
+           DISPLAY '1100-PROCESS-DEPT-RECORD'
+
+           READ DEPT-FILE INTO  WS-DEPT-RECORD
+               AT END      MOVE 'END' TO WS-DEPT-EOF
+               NOT AT END  DISPLAY WS-DEPT-RECORD
+           END-READ
+           .
+      ********  END OF PROGRAM    COBSHEL ***********************   
 System.out.println( 5 + 6 );
 
 
