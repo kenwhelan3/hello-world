@@ -4,6 +4,11 @@ public class Javatest1
 {
     public static void main(String[] args)
     {
-        System.out.println("----------------Javatest1");     
+        System.out.println("----------------Javatest1");  
+        double A =  25;  
+        int B    =  26;  
+        double C = A + B;
+        System.out.println( C  );
+        System.out.println( A + B);
      }
 }
