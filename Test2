@@ -1,11 +1,7 @@
-import java.util.Scanner;
-import java.text.NumberFormat;
-public class Javatest1
-{
-    public static void main(String[] args)
-    {
-        System.out.println("----------------Javatest1");  
-        num1 = 1;
-        System.out.println(" -- num1 = " + num1);
-    }
-     }
+//
+//
+//
+//  comments from Chnages-2
+//
+//
+//
