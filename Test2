@@ -12,4 +12,4 @@ public class Javatest1
         System.out.println( A + B);
      }
 }
-//  removal of comments to test Pull Request steps
+//
